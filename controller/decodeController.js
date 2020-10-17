@@ -7,7 +7,7 @@ const decode = async (req,res)=> {
         if (text === ""){
             throw new Error("Parametro invalido");
         }
-        res.status(200).send("deu certo, code: "+ text);
+        res.status(200).send(text);
     }catch(error){
         res.status(500).send({message: "erro na requisição ao decodificar; erro: "+ error});
     }
