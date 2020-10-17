@@ -11,14 +11,12 @@ dotenv.config();
 import {decodeRouter} from "./routes/decodeRouter.js"
 
 const app = express();
-
+app.use(cors())
 
 /*define o dominio de origem para consumo da API*/
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(
-  cors()
-);
+
 
 /*Definindo rotas*/ 
 app.use(decodeRouter);
